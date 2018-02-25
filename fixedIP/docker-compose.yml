@@ -1,0 +1,25 @@
+version: '2.3'
+services:
+  iptest1:
+    image: enableifconfig
+    build: .
+    command: ifconfig
+    networks:
+      fixedipnet:
+        ipv4_address: 172.20.0.2
+
+  iptest2:
+    image: enableifconfig
+    build: .
+    command: ifconfig
+    networks:
+      fixedipnet:
+        ipv4_address: 172.20.0.3
+
+networks:
+  fixedipnet:
+    driver: bridge
+    ipam:
+      driver: default
+      config:
+        - subnet: 172.20.0.0/24

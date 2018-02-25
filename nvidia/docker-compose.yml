@@ -1,0 +1,6 @@
+version: '2.3'
+services:
+  nvidiatest:
+    image: nvidia/cuda
+    runtime: nvidia
+    command: nvidia-smi
