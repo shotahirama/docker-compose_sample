@@ -1,5 +1,7 @@
-# docker-compose sample (nvidia-runtime, fixed ip)
+# docker-compose sample
+* nvidia-runtime
+  * required nvidia-docker2
+* fixed IP
 
 # REQUIRED
-* nvidia-docker2
 * docker-compose >= 1.19.0
